@@ -1,0 +1,19 @@
+#audiofile {
+  display: none;
+}
+
+#progress-bar {
+  margin: 0;
+  outline-style: solid;
+  outline-width: 1px;
+}
+
+#volume-bar {
+  margin: 0;
+  outline-style: solid;
+  outline-width: 1px;
+}
+
+main p {
+  margin: 0;
+}
