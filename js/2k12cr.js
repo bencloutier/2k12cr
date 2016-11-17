@@ -1,5 +1,13 @@
 var MusicPlayer = function(model) {
   this.init = function() {
+    var resizeVideo = function(){
+      if(document.getElementsByClassName('post-preview')[1].clientWidth < 540) {
+        document.getElementById('video').style.width = document.getElementsByClassName('post-preview')[1].clientWidth + 'px';
+        document.getElementById('video').style.height = (document.getElementsByClassName('post-preview')[1].clientWidth / 2) + 'px';
+      }
+    };
+    window.onresize = resizeVideo;
+    window.onload = resizeVideo;
     // Set model
     this.model = model;
     // Initialize elements
@@ -72,7 +80,7 @@ var MusicPlayer = function(model) {
       var ctx = this.model.progressBar.getContext('2d');
       // Clear canvas before painting
       ctx.clearRect(0, 0, this.model.progressBar.clientWidth, this.model.progressBar.clientHeight);
-      ctx.fillStyle = 'rgb(255,0,0)';
+      ctx.fillStyle = 'rgb(73,155,234)';
       var fWidth = (elapsedTime / this.model.audioElement.duration) * (this.model.progressBar.clientWidth);
       if (fWidth > 0) {
         ctx.fillRect(0, 0, fWidth, this.model.progressBar.clientHeight);
@@ -85,7 +93,7 @@ var MusicPlayer = function(model) {
     if (this.model.volumeBar.getContext) {
       var ctx = this.model.volumeBar.getContext('2d');
       ctx.clearRect(0, 0, this.model.volumeBar.clientWidth, this.model.volumeBar.clientHeight);
-      ctx.fillStyle = 'rgb(0,0,255)';
+      ctx.fillStyle = 'rgb(73,155,234)';
       var fHeight = this.model.volumeBar.clientHeight - volume * this.model.volumeBar.clientHeight;
       ctx.fillRect(0, fHeight, this.model.volumeBar.clientWidth, this.model.volumeBar.clientHeight - fHeight);
     }
