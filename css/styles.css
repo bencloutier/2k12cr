@@ -79,12 +79,14 @@ footer {
   flex-direction: column;
 }
 #splash {
-  background: url("../img/bg3-min.jpeg") no-repeat center center fixed;
+  background: url("../img/bg3-min.jpeg") no-repeat center center;
   background-size: cover;
+  background-attachment: scroll;
 }
 #content {
-  background: url("../img/bg2-min.jpeg") no-repeat center center fixed;
+  background: url("../img/bg2-min.jpeg") no-repeat center center;
   background-size: cover;
+  background-attachment: scroll;
 }
 .social {
   padding: 1rem 0;
@@ -120,5 +122,8 @@ footer {
   }
   .jumbo {
     font-size: 11.391rem;
+  }
+  #content, #splash {
+    background-attachment: fixed;
   }
 }
