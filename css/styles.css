@@ -111,13 +111,20 @@ footer p {
 }
 /* TODO stop using stupid css masking >:( */
 #media:before {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    content: "";
-    background: rgba(0,0,0,0.6);
-    top: 0;
-    left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+}
+#tracks {
+  background: #eee;
+  color: #333;
+}
+#tracks iframe {
+  margin-bottom: 1rem;
 }
 .social ul {
   display: flex;
@@ -148,17 +155,30 @@ footer p {
   margin-bottom: 0;
 }
 .btn {
-  background: transparent;
-  color: #fff;
   padding: 1rem 2rem;
-  border: 2px solid #FF4C4C;
+  border: 2px solid transparent;
   border-radius: 2rem;
   text-transform: uppercase;
   display: inline-block;
 }
-.btn:hover {
+.btn--transparent {
+  background: transparent;
+  color: #fff;
+  border-color: #FF4C4C;
+}
+.btn--transparent:hover {
   background: #FF4C4C;
   color: #fff;
+}
+.btn--red {
+  color: #fff;
+  background: #FF4C4C;
+  border-color: #FF4C4C;
+}
+.btn--red:hover {
+  color: #fff;
+  background: #BF3939;
+  border-color: #BF3939;
 }
 
 .yt-wrapper {
