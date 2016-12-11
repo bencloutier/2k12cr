@@ -108,7 +108,7 @@ blockquote footer {
   min-height: 100vh;
 }
 #splash {
-  background: url("../img/splash_bg.jpeg") no-repeat center center;
+  background: url("../img/splash.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: scroll;
 }
@@ -119,26 +119,14 @@ blockquote footer {
   background: #111;
 }
 #media {
-  background: url("../img/media_bg.jpg") no-repeat center center;
+  background: url("../img/media.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: scroll;
-  position: relative;
 }
 #reviews {
   background: url("../img/reviews.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: scroll;
-  position: relative;
-}
-/* TODO stop using stupid css masking >:( */
-#media:before, #reviews:before {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  content: "";
-  background: rgba(0,0,0,0.6);
-  top: 0;
-  left: 0;
 }
 #tracks {
   background: #eee;
